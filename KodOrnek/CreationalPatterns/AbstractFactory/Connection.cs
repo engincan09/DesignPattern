@@ -8,6 +8,6 @@ namespace KodOrnek.CreationalPatterns.AbstractFactory
     public abstract class Connection
     {
         public abstract bool Open();
-        public abstract bool Close();
+        public abstract bool Close(); 
     }
 }
