@@ -1,4 +1,5 @@
 ﻿using DesignPattern.CreationalPatterns.Builder;
+using DesignPattern.CreationalPatterns.Prototype;
 using KodOrnek.CreationalPatterns.AbstractFactory;
 using KodOrnek.CreationalPatterns.Factory;
 using KodOrnek.Singleton;
@@ -10,12 +11,15 @@ namespace KodOrnek
     {
         static void Main(string[] args)
         {
-            var productBuilder = new NewCustomerProductBuilder();
-            ProductDirector productDirector = new ProductDirector(productBuilder);
-            productDirector.Make();
+            Customer customer = new Customer("Gülizar", "Yılmaz");
+            Customer cloneCustomer = customer.Clone();
 
-            DesignPattern.CreationalPatterns.Builder.Product product = productBuilder.GetResult();
-           
+            // Aynı nesne örneklerini farklı referanslarda tutuyor.
+            // Birbirinin aynısı ve farklı referanslarda olan nesneler elde ettik.
+
+            Console.WriteLine(customer == cloneCustomer); 
+            //output: false
+
         }
     }
 }
