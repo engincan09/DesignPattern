@@ -1,6 +1,7 @@
 ﻿using DesignPattern.CreationalPatterns.Builder;
 using DesignPattern.CreationalPatterns.Prototype;
 using DesignPattern.Structural.Adapter;
+using DesignPattern.Structural.Bridge;
 using KodOrnek.CreationalPatterns.AbstractFactory;
 using KodOrnek.CreationalPatterns.Factory;
 using KodOrnek.Singleton;
@@ -12,10 +13,14 @@ namespace KodOrnek
     {
         static void Main(string[] args)
         {
-            var customOperation = new CustomOperation(new CustomSerializerAdapter());
 
-            string serializedObject = customOperation.SerializeObject(new object());
+       
+            Message textMessage = new TextMessage(new TextMessageSender());
+            textMessage.Send();
 
+            
+            Message emailMessage = new EmailMessage(new EmailMessageSender());
+            emailMessage.Send(); 
         }
     }
 }
