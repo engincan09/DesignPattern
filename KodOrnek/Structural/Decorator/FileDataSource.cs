@@ -6,6 +6,7 @@ namespace DesignPattern.Structural.Decorator
 {
     //Temel işlemlerin kullanıldığı sınıf
     //IDataSource arayüzünün imzasını kullanır.
+    // UML diyagramındaki ConcreteComponent sınıfına denk gelmektedir.
     public class FileDataSource : IDataSource
     {
         private string _fileName;

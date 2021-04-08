@@ -6,6 +6,7 @@ namespace DesignPattern.Structural.Composite
 {
     //Somut sınıfımız
     //Hiyerarşinin en alt tabakası
+    // UML diyagramındaki Leaf kısmına denk gelmektedir.
     public class Product : ICatalogComponent
     {
         private string _name;

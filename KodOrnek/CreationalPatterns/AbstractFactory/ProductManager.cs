@@ -4,9 +4,10 @@ using System.Text;
 
 namespace KodOrnek.CreationalPatterns.AbstractFactory
 {
+    // IDatabaseFactory arayüzünü uygulayan sınıfları kullanarak temel işlemleri yapar
     public class ProductManager
     {
-        IDatabaseFactory _databaseFactory;
+        
         Connection _connection;
         Command _command;
         public ProductManager(IDatabaseFactory databaseFactory)

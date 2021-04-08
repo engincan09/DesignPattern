@@ -4,6 +4,7 @@ using System.Text;
 
 namespace KodOrnek.CreationalPatterns.AbstractFactory
 {
+    // UML'deki ConcreteProduct sınıfına denk gelmektedir.
     public class OracleConnection : Connection
     {
         public override bool Close()

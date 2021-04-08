@@ -4,6 +4,7 @@ using System.Text;
 
 namespace DesignPattern.Structural.Bridge
 {
+    // UML diyagramındaki RefinedAbstraction kısmına denk gelmektedir.
     public class TextMessage : Message
     {
         public TextMessage(IMessageSender messageSender):base(messageSender)

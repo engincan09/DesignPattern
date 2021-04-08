@@ -4,28 +4,36 @@ using System.Text;
 
 namespace DesignPattern.CreationalPatterns.Builder
 {
-    // ProductBuilder sınıfından türer ve orada tanımlı adımları gerçekleştirir.
-    public class NewCustomerProductBuilder : ProductBuilder
+    // LessonBuilder sınıfından türer ve orada tanımlı adımları gerçekleştirir.
+    // UML diyagramındaki ConcreteBuilder sınıfına denk gelmektedir.
+    public class NewStudentLessonBuilder : LessonBuilder
     {
-        //Yeni müşteriler için indirim uygulama işlemi
+        // Burada nesne çağırma işlemleri gerçekleştirilmektedir.
+        // Nasıl çağrılacağı tamamen geliştiriciye kalmıştır.
+        // Çıktıyı görmek amacıyla 1-2 değer ataması yapılacaktır.
+        public override void GetLesson()
+        {
+            lesson = new Lesson();
+            lesson.id = 1;
+            lesson.name = "Artificial Intelligence -  Beginner to Advanced in 10 Minute.";
+            lesson.price = 499;
+        }
+
+        // Burada yeni öğrenciler için geçerli derste %50'lik bir indirim mevcut.
         public override void ApplyDiscount()
         {
-            product.Price = 250;
-            product.DiscountApplied = true;
+            lesson.discountedPrice = Convert.ToInt32(lesson.price * 0.5);
+            lesson.discountApplied = true;
         }
 
-        //Ürün getirme işlemi
-        public override void Get()
+        public override void AddLessonNote()
         {
-            product = new Product
-            {
-                Id = 1, Price = 500, CategoryId = 1
-            };
+            lesson.lessonNote = "Hey, welcome. Your discount code has been applied!";
         }
 
-        public override Product GetResult()
+        public override Lesson GetResult()
         {
-            return product;
+            return lesson;
         }
     }
 }

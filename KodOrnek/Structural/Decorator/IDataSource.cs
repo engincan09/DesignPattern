@@ -6,6 +6,7 @@ namespace DesignPattern.Structural.Decorator
 {
     //Üst sınıfların uygulayacağı arayüz
     //Yapılacak olan temel işlemlerin imzası
+    // UML diyagramındaki Component arayüzüne denk gelmektedir.
     public interface IDataSource
     {
         string GetFileName();

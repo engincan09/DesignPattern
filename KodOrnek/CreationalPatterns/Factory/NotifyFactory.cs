@@ -4,6 +4,7 @@ using System.Text;
 
 namespace KodOrnek.CreationalPatterns.Factory
 {
+    // UML diyagramındaki ProductFactory sınıfına denk gelmektedir.
     public class NotifyFactory
     {
         public INotifyService Create(string notifyType)

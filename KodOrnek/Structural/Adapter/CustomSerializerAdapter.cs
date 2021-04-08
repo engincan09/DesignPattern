@@ -8,7 +8,7 @@ namespace DesignPattern.Structural.Adapter
     // Sistemin kullandığı arayüzü uygular.
     // Bu sayede IJsonSerializer'i uygulayan bir sınıf örneği istendiğinde
     // bu sınıf örneğini vererek mevcut koda dokunmadan sistemin devam etmesi sağlaır.
-
+    // UML diyagramındaki Adapter'a denk gelmektedir.
     public class CustomSerializerAdapter : IJsonSerializer
     {
         public string SerializeObject(object obj)

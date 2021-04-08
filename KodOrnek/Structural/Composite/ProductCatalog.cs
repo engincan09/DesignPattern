@@ -5,6 +5,7 @@ using System.Text;
 namespace DesignPattern.Structural.Composite
 {
     //Somut yapımız
+    // UML diyagramındaki Composite kısmına denk gelmektedir.
     public class ProductCatalog : ICatalogComponent
     {
         private string _name;

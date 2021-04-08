@@ -5,6 +5,8 @@ using System.Text;
 namespace DesignPattern.Structural.Decorator
 {
     //Yeni davranışları tanımladığımız sınıf
+    // UML diyagramındaki BaseDecorator (BaseDataSourceDecorator) sınıfından türer.
+    // UML diyagramındaki ConcreteDecorator sınıfına denk gelmektedir.
     public class ComporessionDecorator : BaseDataSourceDecorator
     {
         public ComporessionDecorator(IDataSource dataSource) : base(dataSource)

@@ -5,6 +5,7 @@ using System.Text;
 namespace KodOrnek.CreationalPatterns.AbstractFactory
 {
     //MsSql komutları için Somut sınıfımız
+    // UML'deki ConcreteProduct sınıfına denk gelmektedir.
     public class MsSqlCommand : Command
     {
         public override void ExecuteCommand(string query)
