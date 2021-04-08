@@ -277,7 +277,7 @@ namespace KodOrnek
         private static void PrototypeDesignPattern()
         {
             Customer engin = new Customer("Engin", "Can");
-            Customer cloneGulizar = engin.Clone();
+            Customer cloneEngin = engin.Clone();
         }
 
         private static void BuilderDesignPattern()
