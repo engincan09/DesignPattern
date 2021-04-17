@@ -6,7 +6,7 @@ namespace KodOrnek.Singleton
 {
     public class Product
     {
-        //Nesnenin daha önceden oluşturulmadığını anlayabilmek için statik instance özelliği tanımladık.
+        //Nesnenin daha önceden oluşturulup oluşturulmadığını anlayabilmek için statik instance özelliği tanımladık.
         public static Product Instance { get; set; }
         public static Object _lock = new object();
 
